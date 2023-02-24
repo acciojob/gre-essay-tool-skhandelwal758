@@ -5,7 +5,10 @@ textbox.addEventListener('input', function(){
 	text = text.trim();
     // console.log(text);
     let words = text.split(" ");
-    let len = words.length;
+	let newArray = words.filter(function(ele){
+		return ele != " "; 
+	});
+    let len = newArray.length;
     document.getElementById("wordCount").innerText = len;
     console.log()
 })
